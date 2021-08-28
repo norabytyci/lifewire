@@ -1,0 +1,33 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    padding-left: clamp(1.875rem, 5.3125vw, 6.375rem);
+    padding-right: clamp(1.875rem, 5.3125vw, 6.375rem);
+}
+
+#sticky-phantom {
+    visibility: hidden;
+}
+
+.sticky {
+    position: fixed !important;
+    top: -3rem;
+    width: 100%;
+    z-index: 9;
+    transform: translateY(3rem);
+    transition: transform .3s ease; 
+}
+
+@media screen and (max-width: 1024px) and (min-width: 577px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 12px;
+    }
+}

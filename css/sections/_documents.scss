@@ -1,0 +1,102 @@
+.documents {
+    display: flex;
+    padding-right: clamp(1.875rem, 5.3125vw, 6.375rem);
+    align-items: center;
+    background: $pink;
+    color: #fff;
+    padding-top: 7.5rem;
+    padding-bottom: 6.8125rem;
+
+    &__illustration {
+        flex: 1;
+        img {
+            width: 100%;
+        }
+        padding-right: 3.5rem;
+    }
+
+    &__content {
+        flex: 1;
+        padding-left: 3.5rem;
+        h2 {
+            font-size: 3.75rem;
+            font-weight: 600;
+            line-height: 1.3em;
+            margin-bottom: 2.5rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+
+            &:first-child {
+                margin-bottom: 3.4375rem;
+            }
+        }
+    }
+
+    &__text {
+        max-width: 60%;
+    }
+
+    &__container {
+        display: flex;
+    }
+
+    &__list {
+        flex: 1;
+        padding-right: 1.75rem;
+
+        li {
+            margin-bottom: 2.5rem;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            padding-left: 5.1875rem;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: url('../../assets/long-arrow-white.svg');
+                left: 0;
+                top: 0;
+                width: 2.77rem;
+                height: 0.8438rem;
+            }
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 577px) {
+        &__illustration {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        flex-direction: column;
+
+        &__container {
+            flex-direction: column;
+        }
+
+        &__content {
+            margin-top: 4rem;
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        &__text {
+            max-width: 100%;
+        }
+
+        &__list {
+            margin-top: 3rem;
+            li {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

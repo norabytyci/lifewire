@@ -1,0 +1,53 @@
+.safe {
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    padding-left: clamp(1.875rem, 5.3125vw, 6.375rem);
+    color: $secondary;
+    padding-top: 10.5rem;
+    padding-bottom: 10.5rem;
+
+    h2 {
+        font-size: 3.75rem;
+        font-weight: 600;
+        line-height: 1em;
+        margin-bottom: 1.875rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+        line-height: 1.6em;
+    }
+
+    &__content {
+        max-width: 41.375rem;
+    }
+    &__illustration {
+        overflow: hidden;
+        img {
+            transform: translateX(1rem);
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 577px) {
+        &__illustration {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        flex-direction: column;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        &__content {
+            h2 {
+                font-size: 2rem;
+            }
+        }
+        &__illustration {
+            margin-top: 3rem;
+        }
+    }
+}

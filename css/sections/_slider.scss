@@ -1,0 +1,107 @@
+.slider {
+    overflow: hidden;
+    position: relative;
+    i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        font-size: 3rem;
+        cursor: pointer;
+        &.prev {
+            left: 6.25%;
+        }
+        &.next {
+            right: 6.25%;
+        }
+    }
+    .slide {
+        color: #fff;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        &__content {
+            max-width: 81.25rem;
+            margin: 0 auto;
+            padding: 0px 1.875rem;
+        }
+        h1 {
+            font-size: 137px;
+            font-weight: 400;
+            line-height: 9.625rem;
+            span {
+                font-weight: bold;
+            }
+        }
+
+        h2 {
+            font-size: 3.75rem;
+            line-height: 1.3em;
+            font-weight: 600;
+            margin-bottom: 6.25rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 1.6em;
+            max-width: 55.25rem;
+        }
+    }
+    .slick-dots {
+        position: absolute;
+        bottom: 3.8125rem;
+        left: 50%;
+        transform: translateX(-50%);
+        list-style: none;
+        display: flex;
+        li {
+            width: 1.1875rem;
+            height: 1.1875rem;
+            border: 2px solid #fff;
+            background: transparent;
+            margin-left: 0.6875rem;
+            border-radius: 50%;
+            text-indent: -9999px;    
+            white-space: nowrap;
+            transition: all .3s ease;
+            cursor: pointer;
+            &:first-child {
+                margin-left: 0px;
+            }
+            &.slick-active {
+                background: #fff;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 577px) {
+        .slide__content {
+            max-width: 70%;
+            h1 {
+                font-size: 4rem;
+            }
+            h2 {
+                font-size: 2.2rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .slide__content {
+            max-width: 80%;
+            h1 {
+                font-size: 4rem;
+                line-height: 1.5em;
+            }
+            h2 {
+                font-size: 2.2rem;
+                line-height: 1.5em;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
